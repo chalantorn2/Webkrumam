@@ -21,11 +21,11 @@ import CertificatePage from "./pages/achievements/CertificatePage";
 import AwardPage from "./pages/achievements/AwardPage";
 
 // ลำดับการนำเข้า CSS
-import "./style.css"; // CSS พื้นฐาน
+import "./styles/style.css"; // CSS พื้นฐาน
 import "./styles/base.css"; // CSS พื้นฐานแทน Tailwind
 import "./styles/layout.css"; // CSS สำหรับ layout
 import "./styles/sections.css"; // CSS สำหรับ sections
-import "./styles/about-works.css"; // CSS สำหรับหน้า about และ works
+import "./styles/about/index.css"; // CSS สำหรับหน้า about และ works
 
 // Import ไฟล์ Font Awesome
 import "@fortawesome/fontawesome-free/css/all.min.css";

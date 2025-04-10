@@ -7,22 +7,23 @@ const AboutPage = () => {
 
   return (
     <main className="page-about">
-      {/* About Hero Section */}
-      <section className="about-hero">
-        <div className="container">
-          <div className="about-hero-content">
-            <h2>เกี่ยวกับฉัน</h2>
-            <p>ยินดีต้อนรับสู่หน้าประวัติและผลงานของฉัน</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Profile Section */}
+      {/* About Profile Section (Combined Hero + Profile) */}
       <section className="about-profile">
         <div className="container">
+          <div className="about-header">
+            <h1 className="about-title">
+              ยินดีต้อนรับสู่
+              <span className="highlight"> ข้อมูลเกี่ยวกับฉัน</span>
+            </h1>
+            <p className="about-subtitle">
+              ผู้เชี่ยวชาญด้านการตลาดและการสร้างผู้ประกอบการรุ่นใหม่
+            </p>
+            <div className="about-line"></div>
+          </div>
+
           <div className="profile-container">
             <div className="profile-image">
-              <img src="/src/assets/Asset1.png" alt="โปรไฟล์" />
+              <img src="/src/assets/Asset3.png" alt="โปรไฟล์" />
             </div>
             <div className="profile-content">
               <h2>นางสาวจิรนันท์ เสนี</h2>
@@ -70,117 +71,72 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="about-skills">
+      {/* Education Section */}
+      <section className="about-education bg-alt">
         <div className="container">
-          <h2 className="section-title">ทักษะความเชี่ยวชาญ</h2>
+          <h2 className="section-title">ประวัติการศึกษา</h2>
 
-          <div className="skills-container">
-            <div className="skill-category">
-              <h3>
-                <i className="fas fa-chart-line"></i> ทักษะการตลาด
-              </h3>
-
-              <div className="skill-item">
-                <span className="skill-name">การตลาดดิจิทัล</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "90%" }}
-                  ></div>
-                </div>
+          <div className="education-grid">
+            {/* มหาวิทยาลัยกรุงเทพธนบุรี */}
+            <div className="education-card">
+              <div className="education-logo">
+                <img
+                  src="/src/assets/logo_2559.png"
+                  alt="มหาวิทยาลัยกรุงเทพธนบุรี"
+                />
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การวางแผนกลยุทธ์</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "85%" }}
-                  ></div>
-                </div>
+              <div className="education-year">
+                <span>2559</span>
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การวิเคราะห์ตลาด</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "80%" }}
-                  ></div>
-                </div>
+              <div className="education-content">
+                <h3>ศึกษาศาสตร์มหาบัณฑิต (ศษ.ม.)</h3>
+                <p className="education-school">มหาวิทยาลัยกรุงเทพธนบุรี</p>
+                <p className="education-detail">
+                  สำเร็จการศึกษาระดับปริญญาโท สาขาศึกษาศาสตร์
+                  <br /> เพื่อพัฒนาทักษะการสอนและการบริหารการศึกษา
+                </p>
               </div>
             </div>
 
-            <div className="skill-category">
-              <h3>
-                <i className="fas fa-laptop-code"></i> ทักษะเทคโนโลยี
-              </h3>
-
-              <div className="skill-item">
-                <span className="skill-name">สื่อสังคมออนไลน์</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "95%" }}
-                  ></div>
-                </div>
+            {/* มหาวิทยาลัยรามคำแหง */}
+            <div className="education-card">
+              <div className="education-logo">
+                <img
+                  src="/src/assets/logo_2551.png"
+                  alt="มหาวิทยาลัยรามคำแหง"
+                />
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การวิเคราะห์ข้อมูล</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "85%" }}
-                  ></div>
-                </div>
+              <div className="education-year">
+                <span>2551</span>
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การออกแบบเว็บไซต์</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "75%" }}
-                  ></div>
-                </div>
+              <div className="education-content">
+                <h3>บริหารธุรกิจมหาบัณฑิต (บธ.ม.)</h3>
+                <p className="education-school">มหาวิทยาลัยรามคำแหง</p>
+                <p className="education-detail">
+                  สำเร็จการศึกษาระดับปริญญาโท <br />
+                  สาขาบริหารธุรกิจ เน้นด้านการตลาดและการจัดการ
+                </p>
               </div>
             </div>
 
-            <div className="skill-category">
-              <h3>
-                <i className="fas fa-users"></i> ทักษะการสอน
-              </h3>
-
-              <div className="skill-item">
-                <span className="skill-name">การสอนแบบ Active Learning</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "90%" }}
-                  ></div>
-                </div>
+            {/* มหาวิทยาลัยราชภัฎภูเก็ต */}
+            <div className="education-card">
+              <div className="education-logo">
+                <img
+                  src="/src/assets/logo_2549.png"
+                  alt="มหาวิทยาลัยราชภัฎภูเก็ต"
+                />
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การบ่มเพาะผู้ประกอบการ</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "85%" }}
-                  ></div>
-                </div>
+              <div className="education-year">
+                <span>2549</span>
               </div>
-
-              <div className="skill-item">
-                <span className="skill-name">การพัฒนาสื่อการสอน</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress-level"
-                    style={{ width: "80%" }}
-                  ></div>
-                </div>
+              <div className="education-content">
+                <h3>บริหารธุรกิจบัณฑิต (บธ.บ.)</h3>
+                <p className="education-school">มหาวิทยาลัยราชภัฏภูเก็ต</p>
+                <p className="education-detail">
+                  สำเร็จการศึกษาระดับปริญญาตรี สาขาบริหารธุรกิจ
+                  ด้วยความมุ่งมั่นในการพัฒนาความรู้ด้านการตลาด
+                </p>
               </div>
             </div>
           </div>

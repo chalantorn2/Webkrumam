@@ -1,0 +1,10 @@
+/* Main About Page Styles - Import all css files */
+@import "./profile.css";
+@import "./education.css";
+
+@import "./responsive.css";
+
+/* Common styles for the about page */
+.page-about {
+  padding-top: 40px; /* เว้นระยะจาก fixed header */
+}
