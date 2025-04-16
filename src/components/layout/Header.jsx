@@ -96,6 +96,15 @@ const Header = () => {
               <ul className="dropdown-menu">
                 <li>
                   <Link
+                    to="/innovation"
+                    className="dropdown-item"
+                    onClick={closeMenu}
+                  >
+                    สิ่งประดิษฐ์
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/committee"
                     className="dropdown-item"
                     onClick={closeMenu}
@@ -110,15 +119,6 @@ const Header = () => {
                     onClick={closeMenu}
                   >
                     วิทยากร
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/innovation"
-                    className="dropdown-item"
-                    onClick={closeMenu}
-                  >
-                    สิ่งประดิษฐ์
                   </Link>
                 </li>
                 <li>

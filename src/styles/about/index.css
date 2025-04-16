@@ -1,7 +1,7 @@
 /* Main About Page Styles - Import all css files */
 @import "./profile.css";
 @import "./education.css";
-
+@import "./service.css";
 @import "./responsive.css";
 
 /* Common styles for the about page */
