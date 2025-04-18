@@ -11,12 +11,12 @@ const TestimonialsSection = () => {
           <div className="testimonial-item">
             <div className="testimonial-image">
               <img
-                src="/src/assets/placeholder.jpg"
+                src="/assets/placeholder.jpg"
                 alt="Profile"
                 onError={(e) => {
                   e.target.onerror = null;
                   // ใช้รูปภาพใน project แทน
-                  e.target.src = "/src/assets/fallback.jpg";
+                  e.target.src = "/assets/fallback.jpg";
                 }}
               />
             </div>
@@ -31,12 +31,12 @@ const TestimonialsSection = () => {
           <div className="testimonial-item">
             <div className="testimonial-image">
               <img
-                src="/src/assets/placeholder.jpg"
+                src="/assets/placeholder.jpg"
                 alt="Profile"
                 onError={(e) => {
                   e.target.onerror = null;
                   // ใช้รูปภาพใน project แทน
-                  e.target.src = "/src/assets/fallback.jpg";
+                  e.target.src = "/assets/fallback.jpg";
                 }}
               />
             </div>

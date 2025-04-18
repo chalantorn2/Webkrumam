@@ -40,7 +40,7 @@ const HeroSection = () => {
           {/* รูปภาพและแบดจ์ด้านขวา */}
           <div className="hero-image">
             <div className="image-wrapper">
-              <img src="/src/assets/Asset1.png" alt="Profile Picture" />
+              <img src="/assets/Asset1.png" alt="Profile Picture" />
             </div>
 
             {/* แบดจ์รอบรูปภาพ */}

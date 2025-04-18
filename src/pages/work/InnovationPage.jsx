@@ -13,7 +13,7 @@ const InnovationPage = () => {
       year: 2567,
       name: "บ้าบินกรอบ (Crispy Berserk)",
       description: "นวัตกรรมอาหารกรอบที่ผสมผสานรสชาติไทยและวัตถุดิบท้องถิ่น",
-      image: "/src/assets/invention/crispyBerserk.jpg",
+      image: "/assets/invention/crispyBerserk.jpg",
       category: "อาหาร",
     },
     {
@@ -22,7 +22,7 @@ const InnovationPage = () => {
       name: "กล่องทําความสะอาดจี้ไฟฟ้าผ่าตัด (Surgical Electric Pendant Cleaning Box)",
       description:
         "นวัตกรรมทางการแพทย์ที่ช่วยทำความสะอาดอุปกรณ์การผ่าตัดอย่างมีประสิทธิภาพ",
-      image: "/src/assets/invention/surgicalPendantCleaner.jpg",
+      image: "/assets/invention/surgicalPendantCleaner.jpg",
       category: "การแพทย์",
     },
     {
@@ -31,7 +31,7 @@ const InnovationPage = () => {
       name: "เส้นพาสต้าข้าวไรห่อมบอน (Hom-Bon Rice Pasta)",
       description:
         "นวัตกรรมอาหารที่ใช้วัตถุดิบจากข้าวไรห่อมบอน ทดแทนการใช้แป้งสาลี",
-      image: "/src/assets/invention/homBonRicePasta.jpg",
+      image: "/assets/invention/homBonRicePasta.jpg",
       category: "อาหาร",
     },
     {
@@ -40,7 +40,7 @@ const InnovationPage = () => {
       name: "สบู่แผ่นน้ำนมแพะ (Goat milk soap sheets)",
       description:
         "สบู่แผ่นบางที่สะดวกในการพกพา ผลิตจากน้ำนมแพะที่มีคุณสมบัติบำรุงผิว",
-      image: "/src/assets/invention/goatMilkSoapSheets.jpg",
+      image: "/assets/invention/goatMilkSoapSheets.jpg",
       category: "เครื่องสำอาง",
     },
     {
@@ -48,7 +48,7 @@ const InnovationPage = () => {
       year: 2564,
       name: "คุกกี้โปรตีนจากเห็ดแครง (Mushroom cookie)",
       description: "ขนมคุกกี้ที่มีโปรตีนสูงจากเห็ดแครง เหมาะสำหรับผู้รักสุขภาพ",
-      image: "/src/assets/invention/mushroomCookie.jpg",
+      image: "/assets/invention/mushroomCookie.jpg",
       category: "อาหาร",
     },
     {
@@ -57,7 +57,7 @@ const InnovationPage = () => {
       name: "เห็ดแครงอบกรอบ (Crispy Mushroom)",
       description:
         "ขนมขบเคี้ยวเพื่อสุขภาพจากเห็ดแครงอบกรอบ ทางเลือกใหม่สำหรับคนรักสุขภาพ",
-      image: "/src/assets/invention/crispyMushroom.jpg",
+      image: "/assets/invention/crispyMushroom.jpg",
       category: "อาหาร",
     },
     {
@@ -66,7 +66,7 @@ const InnovationPage = () => {
       name: "อุปกรณ์อัดกะปิ",
       description:
         "อุปกรณ์ที่ช่วยในการอัดกะปิให้แน่นและได้รูปทรงที่สวยงาม ช่วยเพิ่มมูลค่าสินค้า",
-      image: "/src/assets/invention/shrimpPastePresser.jpg",
+      image: "/assets/invention/shrimpPastePresser.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -74,7 +74,7 @@ const InnovationPage = () => {
       year: 2562,
       name: "B.A Batik Accessories",
       description: "เครื่องประดับจากผ้าบาติกที่สะท้อนเอกลักษณ์ท้องถิ่น",
-      image: "/src/assets/invention/baBatikAccessories.jpg",
+      image: "/assets/invention/baBatikAccessories.jpg",
       category: "หัตถกรรม",
     },
     {
@@ -83,7 +83,7 @@ const InnovationPage = () => {
       name: "Crispy Gaba Cake (เค้กกรอบจากแป้งข้าวสังข์หยด)",
       description:
         "เค้กกรอบที่ผลิตจากแป้งข้าวสังข์หยด มีสารกาบา (GABA) สูง เป็นประโยชน์ต่อสุขภาพ",
-      image: "/src/assets/invention/crispyGabaCake.jpg",
+      image: "/assets/invention/crispyGabaCake.jpg",
       category: "อาหาร",
     },
     {
@@ -91,7 +91,7 @@ const InnovationPage = () => {
       year: 2562,
       name: "Picture of My House (ภาพที่ระลึกจากวัสดุท้องถิ่น)",
       description: "งานฝีมือที่สร้างสรรค์จากวัสดุท้องถิ่นเพื่อเป็นของที่ระลึก",
-      image: "/src/assets/invention/pictureOfMyHouse.jpg",
+      image: "/assets/invention/pictureOfMyHouse.jpg",
       category: "หัตถกรรม",
     },
     {
@@ -99,7 +99,7 @@ const InnovationPage = () => {
       year: 2562,
       name: "อุปกรณ์จับจีบขนมกะหรี่ปั๊บ",
       description: "อุปกรณ์ที่ช่วยในการจับจีบขนมกะหรี่ปั๊บให้สวยงามและรวดเร็ว",
-      image: "/src/assets/invention/curryPuffPleatTool.jpg",
+      image: "/assets/invention/curryPuffPleatTool.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -107,7 +107,7 @@ const InnovationPage = () => {
       year: 2561,
       name: "อุปกรณ์หยิบตัดอเนกประสงค์ (Multi purpose Scissors)",
       description: "กรรไกรอเนกประสงค์ที่สามารถใช้งานได้หลากหลาย ทั้งหยิบและตัด",
-      image: "/src/assets/invention/multiPurposeTool.jpg",
+      image: "/assets/invention/multiPurposeTool.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -115,7 +115,7 @@ const InnovationPage = () => {
       year: 2560,
       name: "กรรไกรฉลาด",
       description: "กรรไกรที่ออกแบบพิเศษเพื่อความสะดวกและปลอดภัยในการใช้งาน",
-      image: "/src/assets/invention/smartScissors.jpg",
+      image: "/assets/invention/smartScissors.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -123,7 +123,7 @@ const InnovationPage = () => {
       year: 2559,
       name: "เปลนอนในรถยนต์สำหรับเด็กอ่อน",
       description: "อุปกรณ์ช่วยให้เด็กอ่อนนอนได้อย่างปลอดภัยและสบายในรถยนต์",
-      image: "/src/assets/invention/babyCarHammock.jpg",
+      image: "/assets/invention/babyCarHammock.jpg",
       category: "เครื่องใช้",
     },
     {
@@ -131,7 +131,7 @@ const InnovationPage = () => {
       year: 2559,
       name: "กรรไกรหยิบตัดอเนกประสงค์",
       description: "กรรไกรที่สามารถใช้หยิบและตัดวัสดุได้หลายประเภท",
-      image: "/src/assets/invention/grabCutScissors.jpg",
+      image: "/assets/invention/grabCutScissors.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -140,7 +140,7 @@ const InnovationPage = () => {
       name: "อุปกรณ์สัญญาณเตือนการกระชากกระเป๋า",
       description:
         "อุปกรณ์ป้องกันการโจรกรรมที่ส่งสัญญาณเตือนเมื่อมีการกระชากกระเป๋า",
-      image: "/src/assets/invention/antiSnatchAlarm.jpg",
+      image: "/assets/invention/antiSnatchAlarm.jpg",
       category: "ความปลอดภัย",
     },
     {
@@ -148,7 +148,7 @@ const InnovationPage = () => {
       year: 2557,
       name: "แผ่นกันเปื้อนใต้วงแขน",
       description: "ผลิตภัณฑ์ป้องกันเหงื่อและคราบเปื้อนที่วงแขนของเสื้อ",
-      image: "/src/assets/invention/underarmShield.jpg",
+      image: "/assets/invention/underarmShield.jpg",
       category: "เครื่องแต่งกาย",
     },
     {
@@ -156,7 +156,7 @@ const InnovationPage = () => {
       year: 2556,
       name: "แผ่นกันเปื้อนปกเสื้อ",
       description: "อุปกรณ์ป้องกันคราบเปื้อนบริเวณปกเสื้อ ใช้งานง่ายและสะดวก",
-      image: "/src/assets/invention/collarShield.jpg",
+      image: "/assets/invention/collarShield.jpg",
       category: "เครื่องแต่งกาย",
     },
     {
@@ -164,7 +164,7 @@ const InnovationPage = () => {
       year: 2555,
       name: "อุปกรณ์ตัดหอยก้นแหลม",
       description: "เครื่องมือเฉพาะทางสำหรับตัดหอยก้นแหลมได้อย่างมีประสิทธิภาพ",
-      image: "/src/assets/invention/shellTailCutter.jpg",
+      image: "/assets/invention/shellTailCutter.jpg",
       category: "เครื่องมือ",
     },
     {
@@ -173,7 +173,7 @@ const InnovationPage = () => {
       name: "อุปกรณ์จุดไฟเตือนแก๊ส",
       description:
         "อุปกรณ์เพื่อความปลอดภัยที่ช่วยตรวจจับและเตือนเมื่อมีแก๊สรั่ว",
-      image: "/src/assets/invention/gasIgniterTool.jpg",
+      image: "/assets/invention/gasIgniterTool.jpg",
       category: "ความปลอดภัย",
     },
   ];
@@ -264,7 +264,7 @@ const InnovationPage = () => {
   };
 
   return (
-    <main className="page-innovation">
+    <main className="page-innovation mb-5">
       <div className="innovation-hero">
         <div className="container">
           <h1 className="innovation-title">สิ่งประดิษฐ์และนวัตกรรม</h1>
@@ -428,7 +428,7 @@ const InnovationPage = () => {
         )}
       </div>
 
-      <div className="innovation-stats-section">
+      {/* <div className="innovation-stats-section">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-box">
@@ -461,7 +461,7 @@ const InnovationPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };

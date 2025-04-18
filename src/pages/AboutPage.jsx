@@ -23,7 +23,7 @@ const AboutPage = () => {
 
           <div className="profile-container">
             <div className="profile-image">
-              <img src="/src/assets/Asset3.png" alt="โปรไฟล์" />
+              <img src="/assets/Asset3.png" alt="โปรไฟล์" />
             </div>
             <div className="profile-content">
               <h2>นางสาวจิรนันท์ เสนี</h2>
@@ -81,7 +81,7 @@ const AboutPage = () => {
             <div className="education-card">
               <div className="education-logo">
                 <img
-                  src="/src/assets/logo_2559.png"
+                  src="/assets/logo_2559.png"
                   alt="มหาวิทยาลัยกรุงเทพธนบุรี"
                 />
               </div>
@@ -101,10 +101,7 @@ const AboutPage = () => {
             {/* มหาวิทยาลัยรามคำแหง */}
             <div className="education-card">
               <div className="education-logo">
-                <img
-                  src="/src/assets/logo_2551.png"
-                  alt="มหาวิทยาลัยรามคำแหง"
-                />
+                <img src="/assets/logo_2551.png" alt="มหาวิทยาลัยรามคำแหง" />
               </div>
               <div className="education-year">
                 <span>2551</span>
@@ -123,7 +120,7 @@ const AboutPage = () => {
             <div className="education-card">
               <div className="education-logo">
                 <img
-                  src="/src/assets/logo_2549.png"
+                  src="/assets/logo_2549.png"
                   alt="มหาวิทยาลัยราชภัฎภูเก็ต"
                 />
               </div>
@@ -151,65 +148,57 @@ const AboutPage = () => {
           <div className="service-timeline">
             {/* ตำแหน่งปัจจุบัน */}
             <div className="service-item">
-              <div className="service-date">
-                <div>1 ตุลาคม 2566</div>
-                <div>ถึง</div>
-                <div>ปัจจุบัน</div>
-              </div>
-              <div className="service-point"></div>
+              <div className="service-dot"></div>
               <div className="service-content">
-                <div className="service-details">
-                  <h3>ครูชำนาญการพิเศษ</h3>
-                  <p className="service-location">วิทยาลัยเทคนิคกระบี่</p>
-                </div>
+                <h3>2566 - ปัจจุบัน</h3>
+                <h4>
+                  <b>ครูชำนาญการพิเศษ</b> วิทยาลัยเทคนิคกระบี่
+                </h4>
+                <p className="service-location">
+                  รายละเอียดตำแหน่งและความรับผิดชอบ
+                </p>
               </div>
             </div>
 
             {/* ตำแหน่งที่ 2 */}
             <div className="service-item">
-              <div className="service-date">
-                <div>29 เมษายน 2562</div>
-                <div>ถึง</div>
-                <div>1 ตุลาคม 2566</div>
-              </div>
-              <div className="service-point"></div>
+              <div className="service-dot"></div>
               <div className="service-content">
-                <div className="service-details">
-                  <h3>ครูชำนาญการ</h3>
-                  <p className="service-location">วิทยาลัยเทคนิคกระบี่</p>
-                </div>
+                <h3>2562 - 2566</h3>
+                <h4>
+                  <b>ครูชำนาญการ</b> วิทยาลัยเทคนิคกระบี่
+                </h4>
+                <p className="service-location">
+                  รายละเอียดตำแหน่งและความรับผิดชอบ
+                </p>
               </div>
             </div>
 
             {/* ตำแหน่งที่ 3 */}
             <div className="service-item">
-              <div className="service-date">
-                <div>22 เมษายน 2558</div>
-                <div>ถึง</div>
-                <div>1 เมษายน 2562</div>
-              </div>
-              <div className="service-point"></div>
+              <div className="service-dot"></div>
               <div className="service-content">
-                <div className="service-details">
-                  <h3>ครู คศ.1</h3>
-                  <p className="service-location">วิทยาลัยเทคนิคสตูล</p>
-                </div>
+                <h3>2558 - 2562</h3>
+                <h4>
+                  <b>ครู คศ.1</b> วิทยาลัยเทคนิคสตูล
+                </h4>
+                <p className="service-location">
+                  รายละเอียดตำแหน่งและความรับผิดชอบ
+                </p>
               </div>
             </div>
 
             {/* ตำแหน่งที่ 4 */}
             <div className="service-item">
-              <div className="service-date">
-                <div>22 เมษายน 2556</div>
-                <div>ถึง</div>
-                <div>1 ตุลาคม 2557</div>
-              </div>
-              <div className="service-point"></div>
+              <div className="service-dot"></div>
               <div className="service-content">
-                <div className="service-details">
-                  <h3>ครูผู้ช่วย</h3>
-                  <p className="service-location">วิทยาลัยเทคนิคสตูล</p>
-                </div>
+                <h3>2556 - 2557</h3>
+                <h4>
+                  <b>ครูผู้ช่วย</b> วิทยาลัยเทคนิคสตูล
+                </h4>
+                <p className="service-location">
+                  รายละเอียดตำแหน่งและความรับผิดชอบ
+                </p>
               </div>
             </div>
           </div>
