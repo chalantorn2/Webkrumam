@@ -8,11 +8,11 @@ const HeroSection = () => {
         <div className="hero-content">
           {/* ข้อความด้านซ้าย */}
           <div className="hero-text">
-            <div className="greeting-box">
+            {/* <div className="greeting-box">
               <span>สวัสดีค่ะ ทุกท่าน</span>
               <div></div>
               <div></div>
-            </div>
+            </div> */}
 
             <h1>
               นางสาว <span className="highlight">จิรนันท์ เสนี</span>,
