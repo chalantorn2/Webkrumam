@@ -2,7 +2,7 @@
 
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npm install terser --save-dev && npm run build"
 
 [[headers]]
   # ตั้งค่า cache headers สำหรับ assets ทั้งหมด
