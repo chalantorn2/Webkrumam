@@ -297,7 +297,7 @@
 }
 
 /* โมดัลแสดงรายละเอียด */
-.innovation-modal {
+.page-innovation .innovation-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -309,7 +309,7 @@
   align-items: center;
 }
 
-.modal-overlay {
+.page-innovation .innovation-modal-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -320,7 +320,7 @@
   animation: fadeIn 0.3s ease forwards;
 }
 
-.modal-content {
+.page-innovation .innovation-modal-content {
   position: relative;
   width: 90%;
   max-width: 1000px;
@@ -332,7 +332,7 @@
   animation: scaleIn 0.3s ease forwards;
 }
 
-.close-modal {
+.page-innovation .innovation-close-modal {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -350,12 +350,12 @@
   transition: all 0.3s ease;
 }
 
-.close-modal:hover {
+.page-innovation .innovation-close-modal:hover {
   background-color: var(--primary-color);
   color: white;
 }
 
-.modal-body {
+.page-innovation .innovation-modal-body {
   display: flex;
   flex-direction: column;
   max-height: 90vh;
@@ -363,24 +363,24 @@
 }
 
 @media (min-width: 768px) {
-  .modal-body {
+  .page-innovation .innovation-modal-body {
     flex-direction: row;
   }
 }
 
-.modal-image {
+.page-innovation .innovation-modal-image {
   position: relative;
   flex: 1;
   min-height: 300px;
 }
 
-.modal-image img {
+.page-innovation .innovation-modal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.modal-year-badge {
+.page-innovation .innovation-modal-year-badge {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -392,12 +392,12 @@
   box-shadow: 0 3px 10px rgba(233, 30, 99, 0.3);
 }
 
-.modal-info {
+.page-innovation .innovation-modal-info {
   flex: 1;
   padding: 30px;
 }
 
-.modal-category {
+.page-innovation .innovation-modal-category {
   display: inline-block;
   background-color: var(--primary-light);
   color: var(--primary-dark);
@@ -407,7 +407,7 @@
   margin-bottom: 15px;
 }
 
-.modal-info h2 {
+.page-innovation .innovation-modal-info h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: var(--text-color);
@@ -461,7 +461,7 @@
   color: var(--text-color);
 }
 
-.modal-actions {
+.page-innovation .innovation-modal-actions {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
@@ -584,79 +584,21 @@
 
 /* Responsive */
 @media screen and (max-width: 992px) {
-  .innovation-title {
-    font-size: 2.5rem;
-  }
-
-  .innovation-filters {
+  .page-innovation .innovation-modal-body {
     flex-direction: column;
   }
 
-  .filter-controls {
-    flex-direction: column;
-  }
-
-  .modal-body {
-    flex-direction: column;
-  }
-
-  .modal-image {
+  .page-innovation .innovation-modal-image {
     height: 300px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .innovation-title {
-    font-size: 2rem;
-  }
-
-  .innovation-hero {
-    padding: 80px 0 50px;
-  }
-
-  .innovation-subtitle {
-    font-size: 1rem;
-  }
-
-  .innovation-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  .modal-content {
+  .page-innovation .innovation-modal-content {
     width: 95%;
   }
 
-  .modal-info {
+  .page-innovation .innovation-modal-info {
     padding: 20px;
-  }
-
-  .innovation-stats {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .innovation-title {
-    font-size: 1.8rem;
-  }
-
-  .innovation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .innovation-card {
-    max-width: 100%;
-  }
-
-  .modal-info h2 {
-    font-size: 1.5rem;
-  }
-
-  .modal-actions {
-    flex-direction: column;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
   }
 }

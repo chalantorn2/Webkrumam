@@ -67,7 +67,7 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Dropdown เมนูผลงาน */}
+            {/* Dropdown เมนูผลงาน - เหลือเฉพาะที่ทำเสร็จแล้ว */}
             <li
               className={`nav-item dropdown ${
                 activeDropdown === "works" ? "open" : ""
@@ -94,6 +94,7 @@ const Header = () => {
                 </svg>
               </button>
               <ul className="dropdown-menu">
+                {/* ✅ เมนูที่เสร็จแล้ว */}
                 <li>
                   <Link
                     to="/innovation"
@@ -103,6 +104,18 @@ const Header = () => {
                     สิ่งประดิษฐ์
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/skills"
+                    className="dropdown-item"
+                    onClick={closeMenu}
+                  >
+                    ทักษะวิชาชีพ
+                  </Link>
+                </li>
+
+                {/* 🔄 เมนูที่ยังไม่เสร็จ - ซ่อนไว้ก่อน */}
+                {/* 
                 <li>
                   <Link
                     to="/committee"
@@ -132,15 +145,6 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/skills"
-                    className="dropdown-item"
-                    onClick={closeMenu}
-                  >
-                    ทักษะวิชาชีพ
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/academic"
                     className="dropdown-item"
                     onClick={closeMenu}
@@ -157,10 +161,11 @@ const Header = () => {
                     ผลงานนักศึกษา
                   </Link>
                 </li>
+                */}
               </ul>
             </li>
 
-            {/* Dropdown เมนูความสำเร็จ */}
+            {/* Dropdown เมนูความสำเร็จ - เหลือเฉพาะที่ทำเสร็จแล้ว */}
             <li
               className={`nav-item dropdown ${
                 activeDropdown === "achievements" ? "open" : ""
@@ -187,6 +192,19 @@ const Header = () => {
                 </svg>
               </button>
               <ul className="dropdown-menu">
+                {/* ✅ เมนูที่เสร็จแล้ว */}
+                <li>
+                  <Link
+                    to="/award"
+                    className="dropdown-item"
+                    onClick={closeMenu}
+                  >
+                    รางวัล
+                  </Link>
+                </li>
+
+                {/* 🔄 เมนูที่ยังไม่เสร็จ - ซ่อนไว้ก่อน */}
+                {/* 
                 <li>
                   <Link
                     to="/training"
@@ -214,15 +232,7 @@ const Header = () => {
                     เกียรติบัตร
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/award"
-                    className="dropdown-item"
-                    onClick={closeMenu}
-                  >
-                    รางวัล
-                  </Link>
-                </li>
+                */}
               </ul>
             </li>
 

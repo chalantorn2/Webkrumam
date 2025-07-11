@@ -361,27 +361,30 @@ const InnovationPage = () => {
         {/* โมดัลแสดงรายละเอียดสิ่งประดิษฐ์ */}
         {isModalOpen && selectedInnovation && (
           <div className="innovation-modal">
-            <div className="modal-overlay" onClick={closeModal}></div>
-            <div className="modal-content">
-              <button className="close-modal" onClick={closeModal}>
+            <div
+              className="innovation-modal-overlay"
+              onClick={closeModal}
+            ></div>
+            <div className="innovation-modal-content">
+              <button className="innovation-close-modal" onClick={closeModal}>
                 <i className="fas fa-times"></i>
               </button>
-              <div className="modal-body">
-                <div className="modal-image">
+              <div className="innovation-modal-body">
+                <div className="innovation-modal-image">
                   <img
                     src={selectedInnovation.image}
                     alt={selectedInnovation.name}
                   />
-                  <div className="modal-year-badge">
+                  <div className="innovation-modal-year-badge">
                     {selectedInnovation.year}
                   </div>
                 </div>
-                <div className="modal-info">
-                  <span className="modal-category">
+                <div className="innovation-modal-info">
+                  <span className="innovation-modal-category">
                     {selectedInnovation.category}
                   </span>
                   <h2>{selectedInnovation.name}</h2>
-                  <p className="modal-description">
+                  <p className="innovation-modal-description">
                     {selectedInnovation.description}
                   </p>
 
@@ -413,7 +416,7 @@ const InnovationPage = () => {
                     </div>
                   </div>
 
-                  <div className="modal-actions">
+                  <div className="innovation-modal-actions">
                     <button className="action-btn primary">
                       <i className="fas fa-download"></i> ดาวน์โหลดเอกสาร
                     </button>

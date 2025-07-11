@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import skillsData from "../../components/data/skillsData"; // นำเข้า skillsData
+import skillsData from "../../data/works/skills";
 import "../../styles/work/skills.css";
 
 const SkillsPage = () => {
@@ -41,18 +38,13 @@ const SkillsPage = () => {
     ],
   };
 
-  const stats = [
-    { icon: "fas fa-trophy", count: 13, label: "รางวัลรวม" },
-    { icon: "fas fa-medal", count: 10, label: "เหรียญทอง" },
-    { icon: "fas fa-award", count: 6, label: "ระดับชาติ" },
-    { icon: "fas fa-star", count: 7, label: "ระดับภาค" },
-  ];
+  // แก้ไขในไฟล์ SkillsPage.jsx - เพิ่มการ sort ในฟังก์ชัน filterSkills
 
   const filterSkills = () => {
     setIsFiltering(true);
 
     setTimeout(() => {
-      let result = [...skillsData]; // ใช้ skillsData ที่นำเข้า
+      let result = [...skillsData];
 
       if (searchTerm) {
         result = result.filter(
@@ -74,6 +66,22 @@ const SkillsPage = () => {
       if (filters.year) {
         result = result.filter((skill) => skill.year === filters.year);
       }
+
+      // ⭐ เพิ่มการเรียงลำดับตามปี (มากไปน้อย = ปีล่าสุดก่อน)
+      result.sort((a, b) => {
+        // เรียงตามปีก่อน (ปีใหม่ไปเก่า)
+        if (b.year !== a.year) {
+          return parseInt(b.year) - parseInt(a.year);
+        }
+
+        // ถ้าปีเดียวกัน ให้ระดับชาติขึ้นก่อน
+        if (a.level !== b.level) {
+          return a.level === "ชาติ" ? -1 : 1;
+        }
+
+        // ถ้าปีและระดับเดียวกัน ให้เรียงตาม id เดิม
+        return a.id - b.id;
+      });
 
       setFilteredSkills(result);
       setIsFiltering(false);
@@ -104,66 +112,14 @@ const SkillsPage = () => {
   }, [searchTerm, filters]);
 
   useEffect(() => {
-    setSkills(skillsData); // ใช้ skillsData ที่นำเข้า
-    setFilteredSkills(skillsData); // ใช้ skillsData ที่นำเข้า
+    setSkills(skillsData);
+    setFilteredSkills(skillsData);
     window.scrollTo(0, 0);
   }, []);
 
-  const getMedalIcon = (medal) => {
-    if (medal === "ทอง") return <i className="fas fa-medal medal-gold"></i>;
-    if (medal === "เงิน") return <i className="fas fa-medal medal-silver"></i>;
-    if (medal === "ทองแดง")
-      return <i className="fas fa-medal medal-bronze"></i>;
-    return null;
-  };
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    arrows: true,
-    pauseOnHover: true,
-    customPaging: () => <div className="slick-dot-custom"></div>,
-    appendDots: (dots) => (
-      <div>
-        <ul className="slick-dots-custom"> {dots} </ul>
-      </div>
-    ),
-    prevArrow: (
-      <div className="slick-arrow-custom slick-prev-custom">
-        <i className="fas fa-chevron-left"></i>
-      </div>
-    ),
-    nextArrow: (
-      <div className="slick-arrow-custom slick-next-custom">
-        <i className="fas fa-chevron-right"></i>
-      </div>
-    ),
-  };
-
-  const slideImages = [
-    {
-      id: 1,
-      src: "/assets/slides/slide1.jpg",
-      caption: "ความสำเร็จในการแข่งขันทักษะ",
-    },
-    { id: 2, src: "/assets/slides/slide2.jpg", caption: "ทีมงานที่ทุ่มเท" },
-    { id: 3, src: "/assets/slides/slide3.jpg", caption: "ช่วงเวลาที่น่าจดจำ" },
-    {
-      id: 4,
-      src: "/assets/slides/slide4.jpg",
-      caption: "นวัตกรรมและความคิดสร้างสรรค์",
-    },
-    { id: 5, src: "/assets/slides/slide5.jpg", caption: "ก้าวสู่ชัยชนะ" },
-  ];
-
   return (
     <main className="page-skills">
+      {/* Hero Section */}
       <section className="skills-hero">
         <div className="container">
           <h1 className="skills-title">ทักษะวิชาชีพ</h1>
@@ -173,25 +129,10 @@ const SkillsPage = () => {
         </div>
       </section>
 
-      {/* <section className="skills-slider">
-        <div className="container">
-          <Slider {...sliderSettings}>
-            {slideImages.map((slide) => (
-              <div key={slide.id} className="slide-item">
-                <div className="slide-image">
-                  <img src={slide.src} alt={slide.caption} />
-                  <div className="slide-caption">
-                    <h3>{slide.caption}</h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section> */}
-
+      {/* Main Content */}
       <section className="skills-section">
         <div className="skills-container">
+          {/* Filters */}
           <div className="skills-filters">
             <div className="search-bar">
               <i className="fas fa-search"></i>
@@ -254,6 +195,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
+          {/* Skills Grid */}
           <div className={`skills-grid ${isFiltering ? "filtering" : ""}`}>
             {filteredSkills.length > 0 ? (
               filteredSkills.map((skill) => (
@@ -303,64 +245,62 @@ const SkillsPage = () => {
         </div>
       </section>
 
+      {/* Modal */}
       {selectedSkill && (
         <div className="skill-modal">
-          <div className="modal-overlay" onClick={closeModal}></div>
-          <div className="modal-content">
-            <button className="close-modal" onClick={closeModal}>
+          <div className="skills-modal-overlay" onClick={closeModal}></div>
+          <div className="skills-modal-content">
+            <button className="skills-close-modal" onClick={closeModal}>
               <i className="fas fa-times"></i>
             </button>
-            <div className="modal-body">
-              <div className="modal-header">
-                <h2 className="modal-title">{selectedSkill.title}</h2>
-                <div className="modal-subtitle">
-                  <div className="modal-subtitle-item">
-                    ระดับ{selectedSkill.level}
-                  </div>
+
+            <div className="skills-modal-body">
+              <div className="skills-modal-header">
+                <h2 className="skills-modal-title">{selectedSkill.title}</h2>
+                <div className="skills-modal-meta">
+                  <span className="meta-item">ระดับ{selectedSkill.level}</span>
                   {selectedSkill.medal && (
-                    <div className="modal-subtitle-item">
+                    <span className="meta-item medal">
                       เหรียญ{selectedSkill.medal}
-                    </div>
+                    </span>
                   )}
-                  <div className="modal-subtitle-item">
+                  <span className="meta-item">
                     ปีการศึกษา {selectedSkill.year}
-                  </div>
+                  </span>
                 </div>
               </div>
 
-              <div className="modal-images">
-                <div className="modal-image">
-                  <img
-                    src={selectedSkill.images[0]}
-                    alt={`${selectedSkill.title} - ภาพที่ 1`}
-                  />
-                </div>
-                <div className="modal-image">
-                  <img
-                    src={selectedSkill.images[1]}
-                    alt={`${selectedSkill.title} - ภาพที่ 2`}
-                  />
-                </div>
+              <div className="skills-modal-images">
+                <img
+                  src={selectedSkill.images[0]}
+                  alt={`${selectedSkill.title} - ภาพที่ 1`}
+                  className="skills-modal-image"
+                />
+                <img
+                  src={selectedSkill.images[1]}
+                  alt={`${selectedSkill.title} - ภาพที่ 2`}
+                  className="skills-modal-image"
+                />
               </div>
 
-              <div className="modal-details">
-                <div className="detail-item">
-                  <span className="detail-label">สถานที่จัดการแข่งขัน</span>
+              <div className="skills-modal-details">
+                <div className="detail-row">
+                  <span className="detail-label">สถานที่จัดการแข่งขัน:</span>
                   <span className="detail-value">{selectedSkill.place}</span>
                 </div>
-                <div className="detail-item">
-                  <span className="detail-label">ระดับการแข่งขัน</span>
+                <div className="detail-row">
+                  <span className="detail-label">ระดับการแข่งขัน:</span>
                   <span className="detail-value">
                     ระดับ{selectedSkill.level}
                   </span>
                 </div>
-                <div className="detail-item">
-                  <span className="detail-label">ปีการศึกษา</span>
+                <div className="detail-row">
+                  <span className="detail-label">ปีการศึกษา:</span>
                   <span className="detail-value">{selectedSkill.year}</span>
                 </div>
                 {selectedSkill.medal && (
-                  <div className="detail-item">
-                    <span className="detail-label">ประเภทเหรียญ</span>
+                  <div className="detail-row">
+                    <span className="detail-label">ประเภทเหรียญ:</span>
                     <span className="detail-value">
                       เหรียญ{selectedSkill.medal}
                     </span>
@@ -368,7 +308,7 @@ const SkillsPage = () => {
                 )}
               </div>
 
-              <div className="modal-description">
+              <div className="skills-modal-description">
                 <h3>รายละเอียดเพิ่มเติม</h3>
                 <p>{selectedSkill.description}</p>
                 <p>
