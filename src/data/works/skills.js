@@ -32,17 +32,7 @@ const skillsData = [
     description: "รายละเอียดเพิ่มเติมเกี่ยวกับรางวัลและผลงาน",
     images: ["/assets/skills/skill3_1.jpg", "/assets/skills/skill3_2.jpg"],
   },
-  {
-    id: 4,
-    title: "รางวัลเหรียญทอง\nทักษะการเขียนแผนธุรกิจ",
-    level: "ชาติ",
-    medal: "ทอง",
-    place: "อาชีวศึกษาจังหวัดร้อยเอ็ด",
-    year: "2562",
-    details: "ระดับชาติ ประจำปีการศึกษา 2562",
-    description: "รายละเอียดเพิ่มเติมเกี่ยวกับรางวัลและผลงาน",
-    images: ["/assets/skills/skill4_1.jpg", "/assets/skills/skill4_2.jpg"],
-  },
+
   {
     id: 5,
     title: "รางวัลรองชนะเลิศอันดับ 2 เหรียญทอง\nทักษะการเขียนแผนธุรกิจ",
